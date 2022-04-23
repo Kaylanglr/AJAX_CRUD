@@ -1,0 +1,75 @@
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Single page AJAX crud</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="ajax.js" defer></script>
+</head>
+<body>
+    <main>
+
+
+        <div id="boeken">
+            <h1>Zoek een boek</h1>
+            <p>
+                <label for="titel">Titel: </label>
+                <input type="text" name="zoekTitel" id="zoekTitel" class="zoekTitel" autocomplete="off">
+            </p>
+            <div id="dataDiv">
+                
+            </div>
+            <button class="addBtn" id="toevoegen">Voeg een boek toe</button>
+        </div>
+
+        <div id="form-modal" class="modal">
+            <div class="modal-content">
+                <div id="form">
+                    <div id="top">
+                        <h1 id="formH1"></h1>
+                    </div>
+                    <form id="boekForm">
+                        <input type="hidden" name="id" id="id">
+                        <table>
+                            <tr>
+                                <td><label for="">Titel</label></td>
+                                <td><input type="text" name="titel" id="titel" required></td>
+                            </tr>
+                            <tr>
+                                <td><label for="">Schrijver</label></td>
+                                <td><input type="text" name="schrijver" id="schrijver" required></td>
+                            </tr>
+                            <tr>
+                                <td><label for="">ISBN</label></td>
+                                <td><input type="number" name="isbn" id="isbn" required></td>
+                            </tr>
+                            <tr>
+                                <td><input type="submit" id="submit" name="submit"></td>
+                            </tr>
+                        </table>
+                    </form>
+                    <div id="close">
+                        <button class="closeBtn" id="closeBtn"><i class="fa-solid fa-xmark"></i></button>
+                    </div>
+                </div> 
+            </div>
+        </div>
+
+        <div id="delete-confirm" class="modal">
+            <div class="modal-content delete-box">
+                <div id="h1">
+                    <h1>Weet je het zeker?</h1>
+                </div>
+                <div>
+                    <button id="confirm" class="deleteBtn"><i class="fa-solid fa-check"></i></button>
+                    <button id="cancel" class="deleteBtn"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
+
+<script src="https://kit.fontawesome.com/ab1ca9801d.js" crossorigin="anonymous"></script>
